@@ -16,7 +16,10 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     elif [[ -f /etc/lsb-release && "$(cat /etc/lsb-release | grep DISTRIB_ID)" == *"Ubuntu"* ]]; then
         # Install packages on Ubuntu
         sudo apt-get update
-        sudo apt-get install -y ffmpeg nodejs git imagemagick yarn
+        sudo apt-get install -y ffmpeg git curl imagemagick
+        curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        npm install --global yarn
     elif [[ -f /etc/debian_version ]]; then
         # Install packages on Debian
         sudo apt-get update
