@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Base made through ChatGPT
 # Set an environment variable based on the operating system
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Check for specific Linux distributions
@@ -50,19 +50,21 @@ yarn install
 
 # Prompt the user to set environment variables
 read -p "Enter MongoDB URI: " MONGODB_URI
+read -p "Enter your mobile number: " NUM
 read -p "Enter bot prefix: " BOT_PREFIX
 read -p "Enter session ID: " SESSION_ID
 read -p "Enter Google API key: " GOOGLE_API_KEY
-read -p "Enter OpenWeatherMap API key: " WEATHER_API_KEY
+read -p "Enter weatherapi.com API key: " WEATHER_API_KEY
 read -p "Enter MyAnimeList username: " MAL_USERNAME
 read -p "Enter MyAnimeList password: " MAL_PASSWORD
 
 # Set environment variables
-echo "MONGODB_URI=$MONGODB_URI" > .env
-echo "BOT_PREFIX=$BOT_PREFIX" >> .env
+echo "MONGODB=$MONGODB_URI" > .env
+echo "MODS=$NUM" >> .env
+echo "PREFIX=$BOT_PREFIX" >> .env
 echo "SESSION_ID=$SESSION_ID" >> .env
-echo "GOOGLE_API_KEY=$GOOGLE_API_KEY" >> .env
-echo "WEATHER_API_KEY=$WEATHER_API_KEY" >> .env
+echo "GOOGLE_API=$GOOGLE_API_KEY" >> .env
+echo "WEATHER_API=$WEATHER_API_KEY" >> .env
 echo "MAL_USERNAME=$MAL_USERNAME" >> .env
 echo "MAL_PASSWORD=$MAL_PASSWORD" >> .env
 
