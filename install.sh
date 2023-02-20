@@ -8,7 +8,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo pacman -Syu --noconfirm ffmpeg nodejs git ImageMagick yarn
     elif [[ -f /etc/fedora-release ]]; then
         # Install packages on Fedora
-        sudo dnf install -y ffmpeg nodejs git Imagemagick yarnpkg
+        sudo dnf install -y ffmpeg nodejs git ImageMagick yarnpkg
     elif [[ -d $HOME/.termux ]]; then
         # Install packages on Termux
         pkg install -y ffmpeg nodejs git imagemagick yarn
