@@ -33,7 +33,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo yum install -y ffmpeg nodejs git imagemagick yarn
     elif [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID)" == *"opensuse"* ]]; then
         # Install packages on openSUSE
-        sudo zypper install -y ffmpeg nodejs git imagemagick yarn
+        sudo zypper install -y ffmpeg-5 nodejs18 git ImageMagick 
+        sudo npm install --global yarn
     else
         echo "Unknown Linux distribution"
         exit 1
