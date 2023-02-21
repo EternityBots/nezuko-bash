@@ -31,7 +31,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     elif [[ -f /etc/redhat-release ]]; then
         # Install packages on Red Hat
         sudo yum install -y ffmpeg nodejs git imagemagick yarn
-    elif [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID)" == *"opensuse"* ]]; then
+    elif [[ -f /etc/os-release && "$(cat /etc/os-release | grep HOME_URL)" == *"https://www.opensuse.org/"* ]]; then
         # Install packages on openSUSE
         sudo zypper install -y ffmpeg-5 nodejs18 git ImageMagick 
         sudo npm install --global yarn
