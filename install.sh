@@ -5,7 +5,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Check for specific Linux distributions
     if [[ -f /etc/arch-release ]]; then
         # Install packages on Arch Linux
-        sudo pacman -Syu --noconfirm ffmpeg nodejs git ImageMagick yarn
+        sudo pacman -Syu --noconfirm ffmpeg nodejs-lts-hydrogen git imagemagick npm
+        sudo npm install --global yarn
     elif [[ -f /etc/fedora-release ]]; then
         # Install packages on Fedora
         sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
