@@ -66,6 +66,7 @@ cd Nezuko
 
 # Install dependencies using yarn
 yarn install
+clear
 
 # Prompt the user to set environment variables
 read -p "Enter MongoDB URI: " MONGODB_URI
@@ -88,7 +89,7 @@ echo "MAL_USERNAME=$MAL_USERNAME" >> .env
 echo "MAL_PASSWORD=$MAL_PASSWORD" >> .env
 
 echo "✅ Environment variables set successfully"
-
+clear 
 # Start the Nezuko bot
 echo "Starting Nezuko Bot 💕💕💕💕💕💕💕💕💕"
 
