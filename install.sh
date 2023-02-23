@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # Install packages on Fedora
         sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
         sudo dnf install -y ffmpeg nodejs git ImageMagick yarnpkg
-    elif [[ -d $HOME/.termux ]]; then
+    elif [[ "$TERMUX_VERSION" != "" ]]; then
         # Install packages on Termux
         pkg install -y ffmpeg nodejs git imagemagick libwebp yarn
     elif [[ -f /etc/lsb-release && "$(cat /etc/lsb-release | grep DISTRIB_ID)" == *"Ubuntu"* ]]; then
