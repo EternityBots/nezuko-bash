@@ -7,6 +7,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # Install packages on Arch Linux
         sudo pacman -Syu --noconfirm ffmpeg nodejs-lts-hydrogen git imagemagick npm
         sudo npm install --global yarn
+        clear
     elif [[ -f /etc/fedora-release ]]; then
         # Install packages on Fedora
         sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -19,6 +20,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo apt-get install -y nodejs
         sudo npm install --global yarn
         npm install --global yarn
+        clear
     elif [[ -f /etc/debian_version ]]; then
         # Install packages on Debian
         sudo apt-get update
@@ -27,13 +29,16 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo apt-get install -y nodejs
         sudo npm install --global yarn
         npm install --global yarn
+        clear
     elif [[ -f /etc/redhat-release ]]; then
         # Install packages on Red Hat
-        sudo yum install -y ffmpeg nodejs git imagemagick yarn
+        sudo yum install -y ffmpeg nodejs git ImageMagick yarnpkg
+        clear
     elif [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID_LIKE)" == *"suse"* ]]; then
         # Install packages on openSUSE
         sudo zypper install -y ffmpeg-5 nodejs18 git ImageMagick 
         sudo npm install --global yarn
+        clear
     else
         echo "Unknown Linux distribution"
         exit 1
@@ -41,9 +46,11 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "linux-android"* ]]; then
     # Install packages on Termux
     pkg install -y ffmpeg nodejs git imagemagick libwebp yarn
+    clear
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Install packages on macOS
     brew install ffmpeg nodejs git imagemagick yarn
+    clear
 else
     echo "Unsupported operating system"
     exit 1
