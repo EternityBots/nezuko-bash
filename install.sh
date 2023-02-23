@@ -17,14 +17,14 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo apt-get install -y ffmpeg git curl imagemagick
         curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
         sudo apt-get install -y nodejs
-        curl -o- -L https://yarnpkg.com/install.sh | bash
+        sudo apt install -y yarn
     elif [[ -f /etc/debian_version ]]; then
         # Install packages on Debian
         sudo apt-get update
         sudo apt-get install -y ffmpeg git curl imagemagick
         curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
         sudo apt-get install -y nodejs
-        curl -o- -L https://yarnpkg.com/install.sh | bash
+        sudo apt install -y yarn
     elif [[ -f /etc/redhat-release ]]; then
         # Install packages on Red Hat
         sudo yum install -y ffmpeg nodejs git imagemagick yarn
