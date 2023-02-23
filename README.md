@@ -19,3 +19,7 @@ Bash script for [Nezuko bot](https://github.com/EternityBots/Nezuko) made by [Ra
 ```
 bash <(curl -L https://github.com/EternityBots/nezuko-bash/raw/main/install.sh)
 ```
+
+# 📄 License
+
+Distributed under the MASSACHUSETTS INSTITUTE OF TECHNOLOGY License. See [LICENSE](/LICENSE) for more information.
