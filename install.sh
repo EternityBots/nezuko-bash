@@ -48,6 +48,8 @@ else
 fi
 
 # Clone the Nezuko repository
+echo "Copying Nezuko Script 🌐"
+
 git clone https://github.com/EternityBots/Nezuko.git
 
 # Change into the Nezuko directory
@@ -76,9 +78,9 @@ echo "WEATHER_API=$WEATHER_API_KEY" >> .env
 echo "MAL_USERNAME=$MAL_USERNAME" >> .env
 echo "MAL_PASSWORD=$MAL_PASSWORD" >> .env
 
-echo "Environment variables set successfully"
+echo "✅ Environment variables set successfully"
 
 # Start the Nezuko bot
-echo "Starting Bot"
+echo "Starting Nezuko Bot 💕💕💕💕💕💕💕💕💕"
 
-yarn start
+node koyeb.js 
