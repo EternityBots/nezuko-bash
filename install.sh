@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo dnf install -y ffmpeg nodejs git ImageMagick yarnpkg
     elif [[ -d $HOME/.termux ]]; then
         # Install packages on Termux
-        pkg install -y ffmpeg nodejs git imagemagick yarn
+        pkg install -y ffmpeg nodejs git imagemagick libwebp yarn
     elif [[ -f /etc/lsb-release && "$(cat /etc/lsb-release | grep DISTRIB_ID)" == *"Ubuntu"* ]]; then
         # Install packages on Ubuntu
         sudo apt-get update
