@@ -36,7 +36,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         echo "Unknown Linux distribution"
         exit 1
     fi
-elif [[ "$TERMUX_VERSION" != "" ]]; then
+elif [[ "$OSTYPE" == "linux-android"* ]]; then
     # Install packages on Termux
     pkg install -y ffmpeg nodejs git imagemagick libwebp yarn
 elif [[ "$OSTYPE" == "darwin"* ]]; then
