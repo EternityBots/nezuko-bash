@@ -46,6 +46,7 @@ elif [[ "$OSTYPE" == "linux"* ]]; then
     if [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID_LIKE)" == *"suse"* ]]; then
         # Install packages on openSUSE
         sudo zypper install -y ffmpeg-5 nodejs18 git ImageMagick 
+        sudo zypper install -y nodejs18 git ImageMagick 
         sudo npm install --global yarn
         clear
     fi  
