@@ -34,11 +34,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # Install packages on Red Hat
         sudo yum install -y ffmpeg nodejs git ImageMagick yarnpkg
         clear
-    elif [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID_LIKE)" == *"suse"* ]]; then
-        # Install packages on openSUSE
-        sudo zypper install -y ffmpeg-5 nodejs18 git ImageMagick 
-        sudo npm install --global yarn
-        clear
     else
         echo "Unknown Linux distribution"
         exit 1
@@ -47,6 +42,13 @@ elif [[ "$OSTYPE" == "linux-android"* ]]; then
     # Install packages on Termux
     pkg install -y ffmpeg nodejs git imagemagick libwebp yarn
     clear
+elif [[ "$OSTYPE" == "linux"* ]]; then
+    if [[ -f /etc/os-release && "$(cat /etc/os-release | grep ID_LIKE)" == *"suse"* ]]; then
+        # Install packages on openSUSE
+        sudo zypper install -y ffmpeg-5 nodejs18 git ImageMagick 
+        sudo npm install --global yarn
+        clear
+    fi  
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Install packages on macOS
     brew install ffmpeg nodejs git imagemagick yarn
