@@ -8,11 +8,11 @@ Bash script for [Nezuko bot](https://github.com/EternityBots/Nezuko) made by [Ra
 
 # 💻 Supported Operating System
 
-- Ubuntu
-- Debian
+- Debian/Ubuntu
 - Fedora
 - RedHat
 - Arch/Manjaro
+- openSUSE
 
 # ❤️ Feel free to use this Script
 
