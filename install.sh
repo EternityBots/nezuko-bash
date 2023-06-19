@@ -109,4 +109,4 @@ clear
 # Start the Nezuko bot
 echo "Starting Nezuko Bot 💕💕💕💕💕💕💕💕💕"
 
-node koyeb.js 
+sudo bash loop.sh
